@@ -1,0 +1,20 @@
+<section class="films" *ngFor="let movie of movies">
+    <article>
+        <h2>{{movie.title}} </h2>
+        <div class="content">
+            <img src={{movie.image}} alt="" height="500" width="300">
+            <p>Sortie le {{movie.createdAt| date:'dd-MM-yy'}}</p>
+            <p>Genre : </p>
+            <p>Durée : {{movie.duration  }}</p>
+            <h3>Synopsis</h3>
+            <div style="white-space: pre-line">
+                <p>{{movie.synopsys}}</p>
+            </div>
+            <div id="outer">
+                <a  class="btn btn-primary" href="/movie/{{movie.movieId}}" >Voir plus de détails</a>              
+            </div>
+        </div>
+    </article>
+</section>
+ 
+    

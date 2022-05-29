@@ -1,0 +1,19 @@
+<section class="films" >
+    <article>
+        <h2>{{movie.title}} </h2>
+        <div class="content">
+            <img src={{movie.image}} alt="" height="500" width="300">
+            <p>{{movie.title}}</p>
+            <p>Genre : </p>
+            <p>Durée : {{movie.duration}}</p>
+            <h3>Resume</h3>
+            <div style="white-space: pre-line">
+                <p>{{movie.summary}}</p>
+            </div>
+            <div id="outer">
+                <a  class="btn btn-primary" href="/movie-edit/{{movie.movieId}}" >Modifier</a>
+                <a  class="btn btn-primary" (click)="deleteMovie(movie.movieId)">Supprimer</a>
+            </div>
+        </div>
+    </article>
+</section>

@@ -1,0 +1,8 @@
+<h2> Categories </h2>
+
+<ul *ngFor="let category of categories">
+   <li><a (click)="findMoviesByCategory(category.categoryId)"> {{category.name}} </a> 
+      <a  class="btn btn-primary" href="/category-edit/{{category.categoryId}}" >Modifier</a>
+      <a class="btn btn-primary" (click)="deleteCategory(category.categoryId)">Delete</a>
+   </li> 
+</ul>
